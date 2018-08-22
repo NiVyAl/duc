@@ -1,0 +1,90 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial";
+    height: 100%;
+}
+
+.main-section {
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+/*
+#features:checked ~ .right-section label[for="features"] {
+    color: red;
+} */
+
+.none {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+label:hover {
+    color: #6d6d6d;
+}
+
+label[for="features"]::after, label[for="social-network"]::after {
+    display: inline-block;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 1.5px solid #aaaaaa;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(45deg);
+    margin: 2px 5px;
+}
+
+label[for="features"]:hover::after, label[for="social-network"]:hover::after {
+    border-right-color: #6d6d6d;
+    border-bottom-color: #6d6d6d;
+}
+
+
+.tvit {
+    width: 20px;
+    height: 20px;
+    background-color: #aaaaaa;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tvit:hover {
+    background-color: #6d6d6d;
+}
+
+.settings {
+    display: inline-block;
+    line-height: 5px;
+    vertical-align: top;
+    font-size: 20px;
+    transform: scaleX(3);
+    transform-origin: left;
+}
+
+.settings::before, .settings::after {
+    content: "-";
+    display: block;
+}
+
+.header-margin {
+    margin-right: 30px;
+}
