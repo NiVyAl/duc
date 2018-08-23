@@ -163,3 +163,138 @@ label[for="features"]:hover::after, label[for="social-network"]:hover::after {
 .settings li {
     line-height: 25px;
 }
+
+
+/* */
+
+.main-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /border: 1px solid red;
+    
+    margin-top: 40px;
+    color: #9a9a9a;
+}
+
+.main-search a{
+    color: #4495d4;
+    text-decoration: none;
+    position: relative;
+}
+
+.logo::after, .logo::before {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    transition: 0.5s ease all;
+}
+
+.logo::after {
+    content: "Узнать больше";
+    line-height: 40px;
+    padding: 2px 10px;
+    white-space: pre;
+    background-color: #949494;
+    color: white;
+    border-radius: 3px;
+    top: 55px;
+    right: -90px;
+}
+
+.logo::before {
+    content: "";
+    border: 10px solid #949494;
+    width: 10px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    top: 67px;
+    right: 41px;
+}
+
+.logo:hover::after, .logo:hover::before {
+    opacity: 1;
+}
+
+.main-search a:hover {
+    text-decoration: underline;
+}
+
+.main-search input {
+    width: 600px;
+    height: 50px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0px 0px 10px #d9d9d9;
+    font-size: 18px;
+    padding: 10px 20px;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+
+.search {
+    position: relative;
+}
+
+.search-btn, .delete-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    
+    /border: 1px solid red;
+}
+
+.search-btn {
+    right: 0;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.search-btn::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #999999;
+    margin: 0 auto;
+}
+
+.search-btn::after {
+    width: 10px;
+    height: 3px;
+    background-color: #999999;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 10px;
+    transform:  rotate(45deg) translateX(-2px);
+}
+
+.search-btn:hover::before, .search input:valid + .search-btn::before {
+    background-color: transparent;
+    border-color: white;
+} 
+
+.search-btn:hover::after, .search input:valid + .search-btn::after {
+    background-color: white;
+}
+
+.search-btn:hover {
+    background-color: #66ad57;
+}
+
+.delete-btn {
+    right: 50px;
+}
+
+
+.search input:valid + .search-btn {
+    background-color: #5b9e4d;
+}
