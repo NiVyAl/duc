@@ -60,12 +60,20 @@
             <div class="main-search">
                 <a href="#" class="logo"><img src="logo_homepage.svg"></a>
                 <div class="search">
-                    <input type="text" maxlength="60" required>
+                    <input type="text" maxlength="60" id="searchText" required>
                     <button id="search" class="search-btn"></button>
-                    <button id="deleteSearch" class="delete-btn"></button>
+                    <ul class="tip">
+                        <li><a href="#">first</a></li>
+                        <li><a href="#">second</a></li>
+                        <li><a href="#">thiiiiiiiiird</a></li>
+                        <li><a href="#">foooooooooooooooooo</a></li>
+                    </ul>
+                    <button id="deleteSearch" class="delete-btn" onclick="deleteSearchText()"></button>
                 </div>
                 <p>Поисковая система, которая не отслеживает вас. <a href="#">Узнайте больше.</a></p>
             </div>
         </div>
+        
+        <script src="ducScript.js"></script>
     </body>
 </html>

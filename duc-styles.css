@@ -154,7 +154,7 @@ label[for="features"]:hover::after, label[for="social-network"]:hover::after {
     margin-top: 27px;
 }
 
-.settings ul {
+ul {
     list-style: none;
     padding-left: 0;
     margin-top: 0px
@@ -247,6 +247,7 @@ label[for="features"]:hover::after, label[for="social-network"]:hover::after {
     border: none;
     background-color: transparent;
     outline: none;
+    display: block;
     
     /border: 1px solid red;
 }
@@ -292,9 +293,62 @@ label[for="features"]:hover::after, label[for="social-network"]:hover::after {
 
 .delete-btn {
     right: 50px;
+    display: none;
 }
 
+.delete-btn::before, .delete-btn::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    transform: rotate(45deg);
+}
+
+.delete-btn::after {
+    margin-top:  -2px;
+    transform: rotate(135deg);
+}
+
+.delete-btn:hover::before, .delete-btn:hover::after {
+    background-color: #484848;
+}
+
+.delete-btn:active::before, .delete-btn:active::after {
+    background-color: #e16948;
+}
 
 .search input:valid + .search-btn {
     background-color: #5b9e4d;
+}
+
+.search input:valid ~ .delete-btn  {
+    display: block;
+}
+
+
+.tip {
+    font-size: 18px;
+    position: absolute;
+    line-height: 30px;
+    display: block;
+    width: 100%;
+    background-color: white;
+    /opacity: 0.8;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.tip a {
+    color: black;
+    width: 100%;
+    display: block;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.tip a:hover {
+    text-decoration: none;
+    background-color: #f2f2f2;
 }
