@@ -41,7 +41,7 @@ label:hover {
     color: #6d6d6d;
 }
 
-label[for="features"]::after, label[for="social-network"]::after {
+.header-margin::after {
     display: inline-block;
     content: "";
     width: 7px;
@@ -53,9 +53,52 @@ label[for="features"]::after, label[for="social-network"]::after {
     margin: 2px 5px;
 }
 
-label[for="features"]:hover::after, label[for="social-network"]:hover::after {
+.header-margin:hover::after {
     border-right-color: #6d6d6d;
     border-bottom-color: #6d6d6d;
+}
+
+.show-case {
+    position: absolute;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 10px #d9d9d9;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 99;
+    width: 220px;
+    margin: auto;
+    top: 30px;
+    right: -20px
+}
+
+.show-case::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: red;
+    border: 10px solid red;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    top: -20px;
+    right: 20px;
+}
+
+.show-case a {
+    text-decoration: none;
+}
+
+.show-case h3 {
+    color: black;
+}
+
+.show-case a h3:hover {
+    text-decoration: underline;
+}
+
+.show-case p {
+    color: #aaaaaa;
 }
 
 
@@ -88,6 +131,9 @@ label[for="features"]:hover::after, label[for="social-network"]:hover::after {
 
 .header-margin {
     margin-right: 25px;
+    
+    display: inline-block; /* если в елемент c не установленым display вложить display: block, то он становиться блочным */
+    position: relative;
 }
 
 
@@ -332,12 +378,14 @@ ul {
     font-size: 18px;
     position: absolute;
     line-height: 30px;
-    display: block;
+    display: none;
     width: 100%;
     background-color: white;
-    /opacity: 0.8;
+    opacity: 0.9;
     border-radius: 10px;
     z-index: 10;
+    
+    box-shadow: 0px 0px 10px #d9d9d9;
 }
 
 .tip a {
@@ -346,9 +394,29 @@ ul {
     display: block;
     padding-left: 20px;
     box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tip li:first-child a {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tip li:last-child a {
+    border-radius: 0px 0px 10px 10px;
 }
 
 .tip a:hover {
     text-decoration: none;
     background-color: #f2f2f2;
+    /background-color: red;
+}
+
+.search input:focus ~ .tip {
+    display: block;
+}
+
+.search input:invalid ~ .tip  {
+    display: none;
 }
