@@ -10,13 +10,14 @@
         <div class="main-section">
             <h1 class="none">duc</h1>
             <header>
-                <input class="none" type="radio" name="toggle" id="features">
-                <input class="none" type="radio" name="toggle" id="social-network">
+                <input class="none" type="radio" name="toggle" id="features" onclick="onTip('features')">
+                <input class="none" type="radio" name="toggle" id="social-network" onclick="onTip('social-network')">
                 <input class="none" type="radio" name="toggle" id="settings-button">
                 <input class="none" type="radio" name="toggle" id="settings-exit">
+                <input class="none" type="radio" name="toggle" id="temp" onclick="onTip('temp')">
 
                 <div class="right-section">
-                    <label for="features" class="header-margin" onclick="onTip(featuresBtn)">Проще говоря, приватность
+                    <label for="features" class="header-margin">Проще говоря, приватность
                         <ul class="show-case">
                             <li><a href="#"><h3>Установите наши приложение и расширение для браузера</h3><p>Защитите свои данные на каждом устройстве.</p></a></li>
                             <li><a href="#"><h3>Зашитите устройтво</h3><p>Ознакомьтесь с нашими руководствами по защите устройств</p></a></li>
@@ -24,7 +25,13 @@
                         </ul>   
                     </label>
                     <a class="tvit" href="https://twitter.com/duckduckgo" target="_blank"></a>
-                    <label for="social-network" class="header-margin"></label>
+                    <label for="social-network" class="header-margin">
+                        <ul class="case-social show-case">
+                            <li><a href="#"><h3>Tvitter</h3></a></li>
+                            <li><a href="#"><h3>Reddit</h3></a></li>
+                            <li><a href="#"><h3>Facebook</h3></a></li>
+                        </ul>
+                    </label>
                     <label for="settings-button" class="settings-button">-</label>
                 </div>
                 

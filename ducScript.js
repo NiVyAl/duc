@@ -7,6 +7,13 @@ var deleteSearchText = function() {
 
 
 var tips = document.querySelectorAll('.tip a');
-console.log(tips);
 
 var featuresBtn = document.querySelector('[for="features"]');
+
+var lastButtonActive = 'temp';
+var onTip = function(inputId) {
+    var button = document.querySelector('label[for="' + inputId + '"]');
+    button.htmlFor = lastButtonActive;
+    lastButtonActive = inputId;
+    
+}
